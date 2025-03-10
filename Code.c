@@ -43,7 +43,7 @@ int main()
         {
             printf("\n\nEnter Author's name: ");
             scanf("%s", author_name);
-            int found = 0;
+            int ar_find = 0;
             for (i = 0; i < count; i++) {
                 if (strcmp(author_name, author[i]) == 0) 
                 {
@@ -51,10 +51,10 @@ int main()
                     printf("Author name = %s\n", author[i]);
                     printf("Number of Pages = %d\n", pages[i]);
                     printf("Price of the Book = %f\n", price[i]);
-                    found = 1;
+                    ar_find = 1;
                 }
             }
-            if (!found) 
+            if (!ar_find) 
             {
                 printf("No books found by the author %s\n", author_name);
             }
