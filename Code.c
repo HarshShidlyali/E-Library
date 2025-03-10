@@ -13,7 +13,8 @@ int main()
         printf("\n\n1. Add book information\n");
         printf("2. Number of books in the library\n");
         printf("3. All books of given Author\n");
-        printf("4. Exit\n\n");
+        printf("4. View all books in the Library\n");
+        printf("5. Exit\n\n");
         printf("Enter the Choice : ");
         scanf("%d",&Get_info);
         printf("\nYou have choosen : %d",Get_info);
@@ -60,6 +61,22 @@ int main()
             }
         }
         else if(Get_info==4)
+        {
+            if(count==0)
+            {
+                printf("\nSorry! No books are available in the Library");
+            }
+            else
+            {
+                printf("\n\nList of the books in the Library\n");
+                for(i=0;i<count;i++)
+                {
+                    printf("\nBook Name : %s",book_name[i]);
+                    printf("\nAuthor name = %s\n\n", author[i]);
+                }
+            }
+        }
+        else if(Get_info==5)
         {
             exit(0);
         }
