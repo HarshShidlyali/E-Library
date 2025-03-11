@@ -1,15 +1,15 @@
 # E-Library Management System
-The E-Library Management System is a C program that allows users to manage a collection of books in a digital library. The system provides options to add books, view all books, search for books by author, count the number of books, and exit the program. This is the begineers level C programming.
+>>The E-Library Management System is a C program that allows users to manage a collection of books in a digital library. The system provides options to add books, view all books, search for books by author, count the number of books, and exit the program. This is the begineers level C programming.
 
 # Features
--> Add Book Information: Store book details such as title, author, pages, and price.
--> Count Books: Display the total number of books in the library.
--> Search by Author: Retrieve and display all books written by a specific author.
--> View All Books: List all books currently available in the library.
--> Exit Program: Safely exit the program.
+>> Add Book Information: Store book details such as title, author, pages, and price.
+>> Count Books: Display the total number of books in the library.
+>> Search by Author: Retrieve and display all books written by a specific author.
+>> View All Books: List all books currently available in the library.
+>> Exit Program: Safely exit the program.
 
 # Author
--- Developed as a simple C-based library management system for learning purposes.
+>> Developed as a simple C-based library management system for learning purposes.
 
 # Learnings from This Program
 
@@ -50,10 +50,10 @@ The E-Library Management System is a C program that allows users to manage a col
 >> Limited array size (fixed at 100 books).
 
 # Future Enhancements
-Implement file storage for data persistence.
-Introduce a book deletion feature.
-Improve user input validation.
+>> Implement file storage for data persistence.
+>> Introduce a book deletion feature.
+>> Improve user input validation.
 
 # Limitations
--- The system uses fixed-size arrays, limiting the number of books to 100.
--- No file storage; data is lost once the program exits.
+>> The system uses fixed-size arrays, limiting the number of books to 100.
+>>  No file storage; data is lost once the program exits.
