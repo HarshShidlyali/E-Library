@@ -12,7 +12,7 @@ int main()
         printf("\n\n*****""\t""WELCOME TO E-LIBRARY ""\t""*****\n");
         printf("\n\n1. Add book information\n");
         printf("2. Number of books in the library\n");
-        printf("3. All books of given Author\n");
+        printf("3. All books of Author\n");
         printf("4. View all books in the Library\n");
         printf("5. Exit\n\n");
         printf("Enter the Choice : ");
