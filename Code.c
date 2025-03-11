@@ -24,9 +24,9 @@ int main()
             scanf("%s", book_name[count]);
             printf("Enter author name = ");
             scanf("%s", author[count]);
-            printf("Enter pages = ");
+            printf("Enter Number of pages = ");
             scanf("%d", &pages[count]);
-            printf("Enter price = ");
+            printf("Enter price of the book = ");
             scanf("%f", &price[count]);
             count++;
             printf("\n\n");
