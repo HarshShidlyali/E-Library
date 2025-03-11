@@ -8,6 +8,8 @@
 >> View All Books: List all books currently available in the library.
 >> Exit Program: Safely exit the program.
 
+![Screenshot from 2025-03-11 16-29-43](https://github.com/user-attachments/assets/ac597f8d-933b-4b5f-86d2-aee39e289717)
+
 # Author
 >> Developed as a simple C-based library management system for learning purposes.
 
