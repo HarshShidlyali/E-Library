@@ -1,18 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define E_LIB "E-Library.txt"
+char author[1000][1000],book_name[1000][1000],author_name[1000];
+int pages[1000],i;
+float price[1000];
+int Get_info,count=0;
+void load_data() {
+    FILE *LIB = fopen(E_LIB, "r");
+    if (LIB == NULL) {
+        return; 
+    }
+
+    while (fscanf(LIB, "%s %s %d %f", book_name[count], author[count], &pages[count], &price[count]) == 4) {
+        count++;
+    }
+
+    fclose(LIB);
+}
+void save_data() {
+    FILE *LIB = fopen(E_LIB, "w");
+    if (LIB == NULL) {
+        printf("Error saving data!\n");
+        return;
+    }
+
+    for (int i = 0; i < count; i++) {
+        fprintf(LIB, "%s %s %d %.2f\n", book_name[i], author[i], pages[i], price[i]);
+    }
+
+    fclose(LIB);
+}
 int main()
 {
-    char author[100][100],book_name[100][100],author_name[100];
-    int pages[100],i;
-    float price[100];
-    int Get_info,count=0;
+    load_data();
     while (1)
     {
         printf("\n\n*****""\t""WELCOME TO E-LIBRARY ""\t""*****\n");
         printf("\n\n1. Add book information\n");
         printf("2. Number of books in the library\n");
-        printf("3. All books of Author\n");
+        printf("3. All books of given Author\n");
         printf("4. View all books in the Library\n");
         printf("5. Exit\n\n");
         printf("Enter the Choice : ");
@@ -24,9 +51,9 @@ int main()
             scanf("%s", book_name[count]);
             printf("Enter author name = ");
             scanf("%s", author[count]);
-            printf("Enter Number of pages = ");
+            printf("Enter pages = ");
             scanf("%d", &pages[count]);
-            printf("Enter price of the book = ");
+            printf("Enter price = ");
             scanf("%f", &price[count]);
             count++;
             printf("\n\n");
@@ -35,6 +62,8 @@ int main()
             printf("\nName of the Author : %s",author[count-1]);
             printf("\nNumber of Pages : %d",pages[count-1]);
             printf("\nBook Price : %f",price[count-1]);
+            count++;
+            save_data();
         }
         else if(Get_info==2)
         {
