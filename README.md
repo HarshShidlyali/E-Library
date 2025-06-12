@@ -51,11 +51,3 @@
 >> No validation for duplicate books.
 >> Limited array size (fixed at 100 books).
 
-# Future Enhancements
->> Implement file storage for data persistence.
->> Introduce a book deletion feature.
->> Improve user input validation.
-
-# Limitations
->> The system uses fixed-size arrays, limiting the number of books to 100.
->>  No file storage; data is lost once the program exits.
