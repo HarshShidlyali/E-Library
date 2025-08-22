@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #define E_LIB "E-Library.txt"
-char author[1000][1000],book_name[1000][1000],author_name[1000];
-int pages[1000],i;
+char author[1000][1000],book_name[1000][1000],author_name[1000],B_Name[1000];
+int pages[1000],i,Borrow[1000];
 float price[1000];
 int Get_info,count=0;
 void load_data() {
@@ -41,7 +41,9 @@ int main()
         printf("2. Number of books in the library\n");
         printf("3. All books of given Author\n");
         printf("4. View all books in the Library\n");
-        printf("5. Exit\n\n");
+        printf("5. Borrowing Book\n");
+        printf("6. Returning Book\n");
+        printf("7. Exit\n\n");
         printf("Enter the Choice : ");
         scanf("%d",&Get_info);
         printf("\nYou have choosen : %d",Get_info);
@@ -105,7 +107,49 @@ int main()
                 }
             }
         }
-        else if(Get_info==5)
+        else if (Get_info == 5) 
+        {
+            printf("\nEnter the Book Name to Borrow: ");
+            scanf("%s", B_Name);
+            int found = 0;
+            for (i = 0; i < count; i++) {
+                if (strcmp(B_Name, book_name[i]) == 0) {
+                    found = 1;
+                    if (Borrow[i]) {
+                        printf("\nSorry, this book is already borrowed!\n");
+                    } else {
+                        Borrow[i] = 1;
+                        printf("\nYou have successfully borrowed: %s\n", book_name[i]);
+                        save_data();
+                    }
+                }
+            }
+            if (!found) {
+                printf("\nBook not found in library.\n");
+            }
+        } 
+        else if (Get_info == 6) 
+        {
+            printf("\nEnter the Book Name to Return: ");
+            scanf("%s", B_Name);
+            int found = 0;
+            for (i = 0; i < count; i++) {
+                if (strcmp(B_Name, book_name[i]) == 0) {
+                    found = 1;
+                    if (!Borrow[i]) {
+                        printf("\nThis book was not borrowed!\n");
+                    } else {
+                        Borrow[i] = 0;
+                        printf("\nYou have successfully returned: %s\n", book_name[i]);
+                        save_data();
+                    }
+                }
+            }
+            if (!found) {
+                printf("\nBook not found in library.\n");
+            }
+        } 
+        else if(Get_info==7)
         {
             exit(0);
         }
